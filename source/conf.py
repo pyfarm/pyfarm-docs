@@ -65,12 +65,9 @@ source_suffix = ".rst"
 master_doc = "index"
 
 project = u"PyFarm"
-root = abspath(join(dirname(__file__), "..", ".."))
-sys.path.insert(0, root)
-docroot = join(root, "docs", "source")
-initpy = join(root, project.lower(), project.lower(), "__init__.py")
+root = abspath(join(dirname(__file__), ".."))
+docroot = join(root, "source")
 tmpdir = tempfile.mkdtemp(suffix="-pyfarm-docs")
-assert isfile(initpy), "%s does not exist" % initpy
 
 print "generating dynamic content"
 
@@ -78,19 +75,9 @@ print "generating dynamic content"
 # have code that can't be imported we can at least read the proper version
 # information
 print "..parsing version/author(s)"
-with open(initpy, "r") as stream:
-    module = parse(stream.read(), stream.name)
-
-author = None
-parsed_version = None
-for obj in module.body:
-    if isinstance(obj, Assign) and obj.targets[0].id == "__version__":
-        parsed_version = map(lambda num: num.n, obj.value.elts)
-    elif isinstance(obj, Assign) and obj.targets[0].id == "__author__":
-        author = obj.value.s
-
-assert isinstance(parsed_version, list), "did not find __version__"
-assert isinstance(author, basestring), "did not find __author__"
+import pyfarm
+author = pyfarm.__author__
+parsed_version = pyfarm.__version__
 
 # General information about the project.
 now = datetime.now()
@@ -98,23 +85,23 @@ copyright = "%s, %s" % (now.year, author)
 release = ".".join(map(str, parsed_version))
 version = ".".join(map(str, parsed_version[0:2]))
 
-# create a requirements file to
-print "..python requirements"
-import setup as _setup
-python_requirements = join(docroot, "include", "python_requirements.rst")
-
-with open(python_requirements, "w") as destination:
-    supported_versions = ((2, 5), (2, 6), (2, 7))
-
-    for major, minor in supported_versions:
-        header = "Python %s.%s" % (major, minor)
-        print >> destination, header
-        print >> destination, "+" * len(header)
-
-        for requirement in sorted(_setup.requirements(major, minor)):
-            print >> destination, "* %s" % requirement
-
-        print >> destination
+# # create a requirements file to
+# print "..python requirements"
+# import setup as _setup
+# python_requirements = join(docroot, "include", "python_requirements.rst")
+#
+# with open(python_requirements, "w") as destination:
+#     supported_versions = ((2, 5), (2, 6), (2, 7))
+#
+#     for major, minor in supported_versions:
+#         header = "Python %s.%s" % (major, minor)
+#         print >> destination, header
+#         print >> destination, "+" * len(header)
+#
+#         for requirement in sorted(_setup.requirements(major, minor)):
+#             print >> destination, "* %s" % requirement
+#
+#         print >> destination
 
 print "..TODO: jobtypes"
 print "..download links"
@@ -177,8 +164,15 @@ download_other = (
 
 
 download_directory = join(
-    tempfile.gettempdir(), "pyfarm", "docbuild",  "downloads"
+    tempfile.gettempdir(), "pyfarm", "docbuild", "downloads"
 )
+pyfarm_files = join(download_directory, "pyfarm-files")
+
+from pyfarm.config.core.find import DEFAULT_CONFIG_ROOT
+
+# for filename in os.listdir(DEFAULT_CONFIG_ROOT):
+shutil.rmtree(pyfarm_files, ignore_errors=True)
+shutil.copytree(DEFAULT_CONFIG_ROOT, pyfarm_files)
 
 USE_SERVER_URL = True
 
