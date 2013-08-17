@@ -68,7 +68,7 @@ project = u"PyFarm"
 root = abspath(join(dirname(__file__), "..", ".."))
 sys.path.insert(0, root)
 docroot = join(root, "docs", "source")
-initpy = join(root, project.lower(), "__init__.py")
+initpy = join(root, project.lower(), project.lower(), "__init__.py")
 tmpdir = tempfile.mkdtemp(suffix="-pyfarm-docs")
 assert isfile(initpy), "%s does not exist" % initpy
 
