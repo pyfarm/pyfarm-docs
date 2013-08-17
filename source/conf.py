@@ -166,7 +166,7 @@ download_other = (
 download_directory = join(
     tempfile.gettempdir(), "pyfarm", "docbuild", "downloads"
 )
-pyfarm_files = join(download_directory, "pyfarm-files")
+pyfarm_files = join("downloads", "config")
 
 from pyfarm.config.core.find import DEFAULT_CONFIG_ROOT
 
