@@ -16,7 +16,7 @@ License
 =======
 PyFarm is licensed under the terms and conditions of the Apache 2.0
 license.  The original text of this license may either be
-:download:`downloaded <../../LICENSE>` or viewed
+:download:`downloaded <downloads/LICENSE>` or viewed
 `on the web <http://www.apache.org/licenses/LICENSE-2.0>`_.  A formatted
 version with the same text as the original is also available below.
 
