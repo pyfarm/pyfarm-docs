@@ -17,4 +17,7 @@ PyFarm Documentation
 
 This repository is dedicated to the generation of documentation for PyFarm.  In
 addition to being a resource for developers it is also used by readthedocs.org
-when building documentation at https://pyfarm.readthedocs.org
+when building documentation at https://pyfarm.readthedocs.org.
+
+**NOTE**: This code is intended for developer use only and is not required for
+operations or installation.
