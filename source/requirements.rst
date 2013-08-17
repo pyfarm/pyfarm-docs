@@ -54,10 +54,8 @@ PyFarm however can still be installed into a virtual environment using pip:
 
     pip install -e .
 
-.. note::
-    installation directly from pypi will be supported in the future
-
-.. include:: include/python_requirements.rst
+By doing this you ``pip`` will download and install all the necessary
+requirements for your specific Python version and platform.
 
 Supported Software (Job Types)
 ------------------------------
