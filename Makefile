@@ -20,6 +20,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
+PYFARM_ROOT   = $(shell python -c "import os, pyfarm, inspect; print os.path.dirname(inspect.getfile(pyfarm))")
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -28,7 +29,6 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) sou
 
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
-PYTHONPATH ?= ../lib/python
 
 .PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest gettext
 
@@ -60,9 +60,9 @@ clean:
 
 api:
 	-rm source/python/*
-	-sphinx-apidoc ../pyfarm/ --output-dir=source/python
+	-sphinx-apidoc $(PYFARM_ROOT) --output-dir=source/python
 
-html: api
+html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
