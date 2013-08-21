@@ -20,5 +20,7 @@ setup(
     name="pyfarm-docs",
     version="dev",
     install_requires=["sphinx"],
-    dependency_links=["https://github.com/pyfarm/pyfarm/tarball/master#egg=pyfarm-dev"]
-)
+    dependency_links=[
+        "https://github.com/pyfarm/pyfarm/tarball/master#egg=pyfarm-dev",
+        "https://github.com/pyfarm/pyfarm-core/tarball/master#egg=pyfarm-dev",
+        "https://github.com/pyfarm/pyfarm-models/tarball/master#egg=pyfarm-dev"])

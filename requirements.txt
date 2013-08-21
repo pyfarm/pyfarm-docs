@@ -20,5 +20,6 @@ netifaces==0.8
 psutil==1.0.1
 -e git+git@github.com:pyfarm/pyfarm.git#egg=pyfarm-dev
 -e git+git@github.com:pyfarm/pyfarm-docs.git#egg=pyfarm_docs-dev
+-e git+git@github.com:pyfarm/pyfarm-core.git#egg=pyfarm_core-dev
 requests==1.2.3
 wsgiref==0.1.2
