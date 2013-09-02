@@ -25,4 +25,5 @@ setup(
         "pyfarm.models",
         "pyfarm.jobtypes",
         "netifaces",
-        "netaddr"])
+        "netaddr",
+        "psutil"])
