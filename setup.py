@@ -18,9 +18,10 @@ from distutils.core import setup
 
 setup(
     name="pyfarm-docs",
-    version="dev",
+    version="1.0.0",
     install_requires=["sphinx"],
     dependency_links=[
         "https://github.com/pyfarm/pyfarm/tarball/master#egg=pyfarm-dev",
         "https://github.com/pyfarm/pyfarm-core/tarball/master#egg=pyfarm-dev",
-        "https://github.com/pyfarm/pyfarm-models/tarball/master#egg=pyfarm-dev"])
+        "https://github.com/pyfarm/pyfarm-models/tarball/master#egg=pyfarm-dev",
+        "https://github.com/pyfarm/pyfarm-jobtypes/tarball/master#egg=pyfarm-dev"])
