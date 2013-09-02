@@ -14,14 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from distutils.core import setup
+
+from setuptools import setup
 
 setup(
     name="pyfarm-docs",
     version="1.0.0",
     install_requires=["sphinx"],
     dependency_links=[
-        "https://github.com/pyfarm/pyfarm/tarball/master#egg=pyfarm-dev",
         "https://github.com/pyfarm/pyfarm-core/tarball/master#egg=pyfarm-dev",
         "https://github.com/pyfarm/pyfarm-models/tarball/master#egg=pyfarm-dev",
         "https://github.com/pyfarm/pyfarm-jobtypes/tarball/master#egg=pyfarm-dev"])
