@@ -27,12 +27,12 @@ the index below.
 **Table of Contents**
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
-   design/index.rst
-   requirements.rst
-   downloads.rst
-   license.rst
+    design/index
+    requirements
+    python/pyfarm
+    license
 
 
 
