@@ -1,5 +1,5 @@
 :mod:`pyfarm.core` Package
-==========================
+==============================
 
 .. automodule:: pyfarm.core.backports
     :members:
@@ -40,6 +40,9 @@
     :members:
     :undoc-members:
     :show-inheritance:
+
+System Information Subpackage
+-----------------------------
 
 .. automodule:: pyfarm.core.sysinfo
     :members:
