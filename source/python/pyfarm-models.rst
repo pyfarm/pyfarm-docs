@@ -11,6 +11,11 @@
     :undoc-members:
     :show-inheritance:
 
+.. automodule:: pyfarm.models.jobtypes
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 .. automodule:: pyfarm.models.task
     :members:
     :undoc-members:
