@@ -18,7 +18,7 @@ from setuptools import setup
 
 setup(
     name="pyfarm-docs",
-    version="1.0.0",
+    version="0.7.0",
     install_requires=[
         "sphinx",
         "pyfarm.core",
