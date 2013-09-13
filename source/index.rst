@@ -31,6 +31,7 @@ the index below.
 
     design/index
     requirements
+    install
     python/pyfarm
     license
 
