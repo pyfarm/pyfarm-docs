@@ -27,20 +27,20 @@ noted.  These instructions have been tested on the following platforms:
 Python Setup
 ------------
 Before installing PyFarm you must install Python.  Below are the various steps
-required to install the base Python interpreter and assoicated libraries.  When
-linked to a webpage instead of a download please locate the installer package
-for your architecutre and download it.
+required to install the base Python interpreter and associated libraries.  When
+linked to a web page instead of a download please locate the installer package
+for your architecture and download it.
 
 Windows
 +++++++
 Windows requires a little extra work in order to setup Python.  Unlike platforms
-such as Linux which make installing a compatable C-complier a simple task
+such as Linux which make installing a compatible C-compiler a simple task
 Windows adds a few extra steps.
 
 
 Required Downloads
 ~~~~~~~~~~~~~~~~~~
-#. `7-zip <http://www.7-zip.org/download.html>`_ - to extract the iso
+#. `7-zip <http://www.7-zip.org/download.html>`_ - to extract the ISO
 #. `Visual Studio 2008 Express w/SP1 <http://download.microsoft.com/download/E/8/E/E8EEB394-7F42-4963-A2D8-29559B738298/VS2008ExpressWithSP1ENUX1504728.iso>`_
    - used to compile C extensions on the fly
 #. `Python 2.7 MSI Installer <http://python.org/download/releases/2.7.5/>`_ -
@@ -51,13 +51,13 @@ Installation
 ~~~~~~~~~~~~
 #. 7-zip - execute the installation package and follow the steps on the screen
 #. Visual Studio 2008 Express
-    #. Right click on the iso file and select 7-zip ->
+    #. Right click on the ISO file and select 7-zip ->
        Extract to "VS2008ExpressWithSP1ENUX1504728\".  After this is complete
-       you are free to delete the iso image if you wish.
+       you are free to delete the ISO image if you wish.
     #. Run (double click) VS2008ExpressWithSP1ENUX1504728\Setup.hta
     #. When the setup begins you will be prompted with a few different additions
        to choose from.  Select "Microsoft Visual C++ 2008 Express Edition"
-    #. Accecpt the EULA and continue forward.
+    #. Accept the EULA and continue forward.
     #. There should be two boxes checked for additional components to install:
         * Microsoft Silverlight Runtime
         * Microsoft SQL Server 2008 Express Edition
@@ -94,7 +94,7 @@ Installation
                ::
 
                    ;C:\Python27;C:\Python27\Scripts
-    #. Right clock on the setuptools gzipped tar (.tar.gz) and select 7-zip ->
+    #. Right click on the setuptools gzipped tar (.tar.gz) and select 7-zip ->
        extract here
     #. Navigate down into the 'dist' directory it produces and do the same thing
        on the file inside that directory
