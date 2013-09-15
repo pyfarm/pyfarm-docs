@@ -20,10 +20,12 @@ Installation
 
 These instructions cover the general installation of PyFarm's components.
 Please note they may vary between platforms though these differences are usually
-noted.  These instructions have been tested on the following platforms:
+noted.
+
+For reference, these instructions have been tested on the following platforms:
     * Debian 7.1 64-bit
-    * Windows 7 Professional 32-bit
-    * Windows XP w/SP3 32-bit
+    * Windows 7 Professional w/SP1 32-bit
+    * Windows XP Professional w/SP3 32-bit
 
 Python Setup
 ------------
