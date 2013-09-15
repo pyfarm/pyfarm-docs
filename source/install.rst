@@ -21,8 +21,9 @@ Installation
 These instructions cover the general installation of PyFarm's components.
 Please note they may vary between platforms though these differences are usually
 noted.  These instructions have been tested on the following platforms:
-* Windows 7 Professional (32-bit)
-* Debian 7 (64-bit)
+    * Debian 7.1 64-bit
+    * Windows 7 Professional 32-bit
+    * Windows XP w/SP3 32-bit
 
 Python Setup
 ------------
@@ -85,8 +86,10 @@ Installation
                cause damage to your installation
 
             #. Right click on Computer and select Properties
-            #. Along the left side select "Advanced System Settings"
-            #. In the dialog the opens select Advanced (if it's not already)
+            #. For Windows along the left side select you'll select
+               "Advanced System Settings".  If you're running Windows XP, skip
+               this step.
+            #. In the dialog that opens select Advanced (if it's not already)
                then click the "Environment Variables" button in the bottom right
             #. In the lower half of the window there's a "System Variables"
                section, select "Path" and then click "Edit"
