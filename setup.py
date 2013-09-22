@@ -14,6 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import sys
+assert sys.version_info[0:2] >= (2, 6), "Python 2.6 or higher is required"
+
 from setuptools import setup
 
 setup(
@@ -21,6 +24,7 @@ setup(
     version="0.7.0",
     install_requires=[
         "sphinx",
+        "flask", "flask-sqlalchemy", "flask-login", "flask-admin",
         "pyfarm.core",
         "pyfarm.models",
         "pyfarm.jobtypes",
