@@ -90,17 +90,17 @@ Master Admin Subpackage
 Master Scripts Subpackage
 -------------------------
 
-.. automodule:: pyfarm.master.scripts.dev
+.. automodule:: pyfarm.master.entrypoints.dev
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.master.scripts.master
+.. automodule:: pyfarm.master.entrypoints.master
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.master.scripts.users
+.. automodule:: pyfarm.master.entrypoints.users
     :members:
     :undoc-members:
     :show-inheritance:

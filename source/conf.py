@@ -44,7 +44,8 @@ intersphinx_mapping = {
     "python": ("http://docs.python.org/%s.%s" % (pymajor, pyminor), None),
     "sqlalchemy": ("http://www.sqlalchemy.org/docs/", None),
     "flask": ("http://flask.readthedocs.org/en/latest/", None),
-    "numpy": ("http://docs.scipy.org/doc/numpy", None)}
+    "numpy": ("http://docs.scipy.org/doc/numpy", None),
+    "wtforms": ("http://wtforms.readthedocs.org/en/latest/", None)}
 
 templates_path = ["_templates"]
 source_suffix = ".rst"
@@ -52,7 +53,7 @@ master_doc = "index"
 
 project = u"PyFarm"
 author = "Oliver Palmer"
-parsed_version = (1, 0, 0)
+parsed_version = (0, 7, 0)
 root = abspath(join(dirname(__file__), ".."))
 docroot = join(root, "source")
 tmpdir = tempfile.mkdtemp(suffix="-pyfarm-docs")

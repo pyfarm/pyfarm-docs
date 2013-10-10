@@ -23,9 +23,19 @@ PyFarm may be executing or the infrastructure required.
 Summary
 -------
 
-* **Python** Python 2.5 through 2.7 is currently supported.  Python 3.0 support
-  is planned but cannot be provided until the underlying libraries support
-  Python 3.0 as well.
+* **Python** Depending on the module being used, different versions of Python
+  may be supported.  Eventually Python 2.5 support will be dropped however this
+  likely will not happen until Python 3.0 support is added.  In any case, notice
+  will be provided well in advance of a release if any of the below changes.
+
+    .. csv-table:: **Module Specific Python Version Support**
+        :header: Module, Python Version
+        :widths: 10, 50
+
+        :mod:`pyfarm.core`,2.5 - 2.7
+        :mod:`pyfarm.api`,2.5 - 2.7
+        :mod:`pyfarm.agent`,2.5 - 2.7
+        :mod:`pyfarm.master`,2.7 (2.6 should work too but is untested)
 
 * **Operation System** Linux, Mac, and Windows.  Some features may be limited
   on disabled on certain platforms.
@@ -48,9 +58,7 @@ Python
 Below is a dynamic list of requirements constructed from PyFarm's `setup.py`
 script.  There's not currently a `requirements.txt` file associated with this
 project because of the differences in dependencies between Python versions.
-PyFarm however can still be installed into a virtual environment using pip:
-
-::
+PyFarm however can still be installed into a virtual environment using pip:::
 
     pip install -e .
 
@@ -60,7 +68,6 @@ requirements for your specific Python version and platform.
 Supported Software (Job Types)
 ------------------------------
 
-| **TODO**: add links to job type specific documentation
 PyFarm 1.0.0 provides several job types out of the box.  Each of these software
 packages will have their own requirements as well so please visit the
 manufacturers website for more information.

@@ -15,7 +15,7 @@
 PyFarm - A Python Based Distributed Job System
 ==============================================
 
-.. note::
+.. attention::
     These documents are still undergoing revision
 
 PyFarm is a Python based distributed job system which is intended to be easy
@@ -32,7 +32,8 @@ the index below.
     design/index
     requirements
     install
-    python/pyfarm
+    environment
+    python/modules
     license
 
 
