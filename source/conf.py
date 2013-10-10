@@ -36,18 +36,15 @@ extensions = [
     "sphinx.ext.coverage",
     "sphinx.ext.ifconfig",
     "sphinx.ext.viewcode",
-    "sphinx.ext.intersphinx"
-]
+    "sphinx.ext.intersphinx",
+    "sphinxcontrib.httpdomain"]
 
 pymajor, pyminor = sys.version_info[0:2]
 intersphinx_mapping = {
     "python": ("http://docs.python.org/%s.%s" % (pymajor, pyminor), None),
     "sqlalchemy": ("http://www.sqlalchemy.org/docs/", None),
     "flask": ("http://flask.readthedocs.org/en/latest/", None),
-    "numpy": ("http://docs.scipy.org/doc/numpy", None),
-    "flask_restful": ("http://flask-restful.readthedocs.org/en/latest/", None)
-}
-intersphinx_mapping["flask-restful"] = intersphinx_mapping["flask_restful"]
+    "numpy": ("http://docs.scipy.org/doc/numpy", None)}
 
 templates_path = ["_templates"]
 source_suffix = ".rst"

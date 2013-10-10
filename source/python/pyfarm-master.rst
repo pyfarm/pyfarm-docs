@@ -13,79 +13,94 @@
 .. limitations under the License.
 
 
-:mod:`pyfarm.core` Package
-==========================
+:mod:`pyfarm.master` Package
+============================
 
-.. automodule:: pyfarm.core.backports
+.. automodule:: pyfarm.master.application
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.cmdargs
+.. automodule:: pyfarm.master.errors
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.config
+.. automodule:: pyfarm.master.index
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.enums
+.. automodule:: pyfarm.master.initial
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.error
+.. automodule:: pyfarm.master.login
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.files
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-.. automodule:: pyfarm.core.utility
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-.. automodule:: pyfarm.core.warning
+.. automodule:: pyfarm.master.utility
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-System Information Subpackage
------------------------------
+Master API Subpackage
+---------------------
 
-.. automodule:: pyfarm.core.sysinfo
+.. automodule:: pyfarm.master.api.agents
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.sysinfo.memory
+
+
+Master Admin Subpackage
+-----------------------
+
+.. automodule:: pyfarm.master.admin.agents
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.sysinfo.network
+.. automodule:: pyfarm.master.admin.baseview
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.sysinfo.osdata
+.. automodule:: pyfarm.master.admin.core
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.sysinfo.processor
+.. automodule:: pyfarm.master.admin.users
     :members:
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.sysinfo.user
+.. automodule:: pyfarm.master.admin.work
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+
+Master Scripts Subpackage
+-------------------------
+
+.. automodule:: pyfarm.master.scripts.dev
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.master.scripts.master
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.master.scripts.users
     :members:
     :undoc-members:
     :show-inheritance:

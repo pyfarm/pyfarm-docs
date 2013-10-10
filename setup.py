@@ -19,7 +19,7 @@ assert sys.version_info[0:2] >= (2, 6), "Python 2.6 or higher is required"
 
 # install from the remote repo for now
 import os
-os.system("pip install https://github.com/mrjoes/flask-admin/archive/master.zip")
+os.system("easy_install https://github.com/mrjoes/flask-admin/archive/master.zip")
 
 from setuptools import setup
 
