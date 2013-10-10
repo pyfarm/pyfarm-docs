@@ -17,17 +17,19 @@
 import sys
 assert sys.version_info[0:2] >= (2, 6), "Python 2.6 or higher is required"
 
+# install from the remote repo for now
+import os
+os.system("pip install https://github.com/mrjoes/flask-admin/archive/master.zip")
+
 from setuptools import setup
 
 setup(
     name="pyfarm-docs",
     version="0.7.0",
     install_requires=[
-        "sphinx",
-        "flask", "flask-sqlalchemy", "flask-login", "flask-admin",
+        "sphinx", "sphinxcontrib-httpdomain", "netaddr", "netifaces",
+        "flask", "flask-sqlalchemy", "flask-login", "psutil",
         "pyfarm.core",
         "pyfarm.models",
-        "pyfarm.jobtypes",
-        "netifaces",
-        "netaddr",
-        "psutil"])
+        "pyfarm.master",
+        "pyfarm.jobtypes"])
