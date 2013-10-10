@@ -36,8 +36,8 @@ extensions = [
     "sphinx.ext.coverage",
     "sphinx.ext.ifconfig",
     "sphinx.ext.viewcode",
-    "sphinx.ext.intersphinx",
-    "sphinxcontrib.httpdomain"]
+    "sphinx.ext.intersphinx"]
+    #"sphinxcontrib.httpdomain"]
 
 pymajor, pyminor = sys.version_info[0:2]
 intersphinx_mapping = {
