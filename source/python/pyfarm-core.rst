@@ -36,11 +36,6 @@
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.error
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 .. automodule:: pyfarm.core.files
     :members:
     :undoc-members:
