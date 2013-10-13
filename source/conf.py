@@ -16,8 +16,6 @@
 
 from __future__ import with_statement
 
-import pkg_resources
-
 import sys
 import tempfile
 from datetime import datetime
@@ -36,8 +34,8 @@ extensions = [
     "sphinx.ext.coverage",
     "sphinx.ext.ifconfig",
     "sphinx.ext.viewcode",
-    "sphinx.ext.intersphinx"]
-    #"sphinxcontrib.httpdomain"]
+    "sphinx.ext.intersphinx",
+    "sphinxcontrib.httpdomain"]
 
 pymajor, pyminor = sys.version_info[0:2]
 intersphinx_mapping = {
@@ -86,17 +84,14 @@ latex_elements = {}
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ("index", "PyFarm.tex", u"PyFarm Documentation",
-   u"Oliver Palmer", "manual"),
-]
+   u"Oliver Palmer", "manual")]
 
 
 man_pages = [
     ("index", "pyfarm", u"PyFarm Documentation",
-     [u"Oliver Palmer"], 1)
-]
+     [u"Oliver Palmer"], 1)]
 
 texinfo_documents = [
   ("index", "PyFarm", u"PyFarm Documentation",
    u"Oliver Palmer", "PyFarm", "A Python based distributed job system",
-   "Miscellaneous"),
-]
+   "Miscellaneous")]
