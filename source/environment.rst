@@ -46,8 +46,6 @@ master.
         dialect+driver://user:password@host/dbname[?key=value..]
 
 
-
-
 .. envvar:: PYFARM_SECRET_KEY
 
     When present this value is used by forms and the password storage as
@@ -65,3 +63,17 @@ master.
     If set to `true` then all json output by the REST api will be human
     readable.  Setting :envvar:`PYFARM_CONFIG` to `debug` will also produce
     the same effect.
+
+.. envvar:: PYFARM_API_VERSION
+
+    The version of the REST api used for varying points of logic and
+    for constructing :envvar:`PYFARM_API_PREFIX`
+
+.. envvar:: PYFARM_API_PREFIX
+
+    If set, this will establish the prefix for mounting the API.  This value
+    is combined with :envvar:`PYFARM_API_VERSION` resulting in something along
+    the lines of::
+
+        https://$hostname/$PYFARM_API_PREFIX$PYFARM_API_VERSION
+
