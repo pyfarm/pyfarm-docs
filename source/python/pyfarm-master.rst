@@ -55,12 +55,6 @@ Master API Subpackage
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.master.api.utility
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-
 
 Master Admin Subpackage
 -----------------------
