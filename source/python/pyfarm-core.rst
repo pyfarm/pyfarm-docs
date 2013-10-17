@@ -32,9 +32,6 @@
     :show-inheritance:
 
 .. automodule:: pyfarm.core.enums
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 .. automodule:: pyfarm.core.files
     :members:
