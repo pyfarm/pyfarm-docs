@@ -41,9 +41,9 @@ pymajor, pyminor = sys.version_info[0:2]
 intersphinx_mapping = {
     "python": ("http://docs.python.org/%s.%s" % (pymajor, pyminor), None),
     "sqlalchemy": ("http://www.sqlalchemy.org/docs/", None),
-    "flask": ("http://flask.readthedocs.org/en/latest/", None),
+    "flask": ("https://flask.readthedocs.org/en/latest/", None),
     "numpy": ("http://docs.scipy.org/doc/numpy", None),
-    "wtforms": ("http://wtforms.readthedocs.org/en/latest/", None)}
+    "wtforms": ("https://wtforms.readthedocs.org/en/latest/", None)}
 
 templates_path = ["_templates"]
 source_suffix = ".rst"
