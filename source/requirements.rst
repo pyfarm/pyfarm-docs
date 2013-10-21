@@ -78,4 +78,4 @@ manufacturers website for more information.
 
 If you wish to request a new builtin type or check the integration status of
 one checkout their tickets
-`on github <https://github.com/opalmer/pyfarm/issues?labels=3rd+party+integration&page=1&state=open>`_
+`on github <https://github.com/pyfarm/pyfarm-jobtypes/issues?state=open>`_
