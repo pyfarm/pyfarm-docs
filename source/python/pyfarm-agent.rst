@@ -13,13 +13,33 @@
 .. limitations under the License.
 
 
-PyFarm Packages
-===============
+:mod:`pyfarm.agent` Package
+===========================
 
-.. toctree::
-   :maxdepth: 4
+.. automodule:: pyfarm.agent.protocols
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
-   pyfarm-core
-   pyfarm-models
-   pyfarm-master
-   pyfarm-agent
+.. automodule:: pyfarm.agent.utility
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Agent Processor Subpackage
+--------------------------
+
+.. automodule:: pyfarm.agent.processor.service
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Agent Manager Subpackage
+------------------------
+
+.. automodule:: pyfarm.agent.manager.service
+    :members:
+    :undoc-members:
+    :show-inheritance:
