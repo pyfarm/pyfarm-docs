@@ -34,6 +34,7 @@ class Install(install):
         install_urls = [
             "https://github.com/mrjoes/flask-admin/archive/master.zip",
             "https://github.com/pyfarm/pyfarm-core/archive/master.zip",
+            "https://github.com/pyfarm/pyfarm-agent/archive/master.zip",
             "https://github.com/pyfarm/pyfarm-master/archive/master.zip",
             "https://github.com/pyfarm/pyfarm-models/archive/master.zip",
             "https://github.com/pyfarm/pyfarm-jobtypes/archive/master.zip"]
