@@ -86,8 +86,8 @@ Master Admin Subpackage
 
 
 
-Master Scripts Subpackage
--------------------------
+Master Entrypoints Subpackage
+-----------------------------
 
 .. automodule:: pyfarm.master.entrypoints.dev
     :members:
