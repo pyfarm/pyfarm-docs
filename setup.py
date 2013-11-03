@@ -20,7 +20,6 @@ assert sys.version_info[0:2] >= (2, 6), "Python 2.6 or higher is required"
 # Because we have to install libraries directly from repos, we must
 # use the setup.py directly for now.  PIP runs this file as a script which
 # means it does not always pickup our custom install clas
-assert sys.argv[0] == "setup.py", "only `python setup.py install` is allowed"
 
 from setuptools import setup
 from setuptools.command import easy_install
