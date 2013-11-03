@@ -27,24 +27,6 @@
     :show-inheritance:
 
 
-:mod:`pyfarm.agent` Manager Subpackage
---------------------------------------
-
-.. automodule:: pyfarm.agent.manager.service
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-
-:mod:`pyfarm.agent` Processor Subpackage
-----------------------------------------
-
-.. automodule:: pyfarm.agent.processor.service
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-
 :mod:`pyfarm.agent` Utility Subpackage
 --------------------------------------
 
@@ -53,10 +35,6 @@
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.agent.utility.structures
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 .. automodule:: pyfarm.agent.utility.tasks
     :members:
