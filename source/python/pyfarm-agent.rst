@@ -21,14 +21,23 @@
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.agent.utility
+.. automodule:: pyfarm.agent.service
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-Agent Processor Subpackage
---------------------------
+:mod:`pyfarm.agent` Manager Subpackage
+--------------------------------------
+
+.. automodule:: pyfarm.agent.manager.service
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+:mod:`pyfarm.agent` Processor Subpackage
+----------------------------------------
 
 .. automodule:: pyfarm.agent.processor.service
     :members:
@@ -36,10 +45,20 @@ Agent Processor Subpackage
     :show-inheritance:
 
 
-Agent Manager Subpackage
-------------------------
+:mod:`pyfarm.agent` Utility Subpackage
+--------------------------------------
 
-.. automodule:: pyfarm.agent.manager.service
+.. automodule:: pyfarm.agent.utility.retry
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.agent.utility.structures
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.agent.utility.tasks
     :members:
     :undoc-members:
     :show-inheritance:
