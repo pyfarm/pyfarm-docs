@@ -31,7 +31,6 @@ class Install(install):
     def run(self):
         # easy_install from urls
         install_urls = [
-            "https://github.com/mrjoes/flask-admin/archive/master.zip",
             "https://github.com/pyfarm/pyfarm-core/archive/master.zip",
             "https://github.com/pyfarm/pyfarm-agent/archive/master.zip",
             "https://github.com/pyfarm/pyfarm-master/archive/master.zip",
