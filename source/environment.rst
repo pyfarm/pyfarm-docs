@@ -39,38 +39,51 @@ Environment variables that are used to setup or control the database backend.
 
     The prefix for all table names.  Normally this should never be changed but
     could be for testing or similiar similiar circumstances.
+    **NOTE**: making this value to long may produce errors in some databases
+    such as MySQL
 
 .. envvar:: PYFARM_DB_MAX_HOSTNAME_LENGTH
 
-    The maximum length a hostname can be.  Defaults to 255.
+    The maximum length a hostname can be
+    **Default**: 255
 
 .. envvar:: PYFARM_DB_MAX_JOBTYPE_LENGTH
 
-    The maximum length for the name of a jobtype.  Defaults to 64.
+    The maximum length for the name of a jobtype.
+    **Default**: 64
 
 .. envvar:: PYFARM_DB_MAX_COMMAND_LENGTH
 
-    The maximum length a single command can be.  Defaults to 64
+    The maximum length a single command can be.
+    **Default**: 64
 
 .. envvar:: PYFARM_DB_MAX_USERNAME_LENGTH
 
-    The maximum length a username can be.  Defaults to 255.
+    The maximum length a username can be.
+    **Default**: 255
 
 .. envvar:: PYFARM_DB_MAX_EMAILADDR_LENGTH
 
-    The maximum length a email address can be.  Defaults to 255.
+    The maximum length a email address can be
+    **Default**: 255
 
 .. envvar:: PYFARM_DB_MAX_ROLE_LENGTH
 
-    The maximum length a role can be.  Defaults to 128.
+    The maximum length a role can be
+    **Default**: 128
 
 .. envvar:: PYFARM_DB_MAX_TAG_LENGTH
 
-    The maximum length a tag can be.  Defaults to 64.
+    The maximum length a tag can be
+    **Default**: 64
 
     **NOTE** PyFarm uses the word 'tag' in several places.  This value controls
     the max length of any string which is a tag.
 
+.. envvar:: PYFARM_DB_MAX_PROJECT_NAME_LENGTH
+
+    The maximum length any one project name can be.
+    **Default**: 32
 
 Database Constraints and Validation
 -----------------------------------
