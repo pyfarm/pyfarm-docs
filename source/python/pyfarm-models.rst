@@ -31,7 +31,7 @@
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.models.users
+.. automodule:: pyfarm.models.user
     :members:
     :undoc-members:
     :show-inheritance:
