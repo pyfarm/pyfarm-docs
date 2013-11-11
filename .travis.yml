@@ -23,10 +23,6 @@ before_script:
 install:
   - if [[ $TRAVIS_PYTHON_VERSION != "2.7" ]]; then pip install simplejson --use-mirrors; fi
   - if [[ $TDB_DRIVER != "" ]]; then pip install $TDB_DRIVER; fi
-  - easy_install https://github.com/mrjoes/flask-admin/archive/master.zip
-  - easy_install https://github.com/pyfarm/pyfarm-core/archive/master.zip
-  - easy_install https://github.com/pyfarm/pyfarm-models/archive/master.zip
-  - easy_install https://github.com/pyfarm/pyfarm-master/archive/master.zip
   - python setup.py install
 
 script:
