@@ -29,8 +29,7 @@ the index below.
 .. toctree::
     :maxdepth: 2
 
-    requirements
-    install
+    contributing/index
     environment
     python/modules
     license
@@ -43,4 +42,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
