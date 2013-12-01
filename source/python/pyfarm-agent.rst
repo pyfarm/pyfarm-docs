@@ -21,14 +21,34 @@
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.agent.service
+
+:mod:`pyfarm.agent.http` Manager Subpackage
+-------------------------------------------
+
+.. automodule:: pyfarm.agent.http.client
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-:mod:`pyfarm.agent` Utility Subpackage
---------------------------------------
+
+:mod:`pyfarm.agent.manager` Manager Subpackage
+----------------------------------------------
+
+.. automodule:: pyfarm.agent.manager.service
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+.. automodule:: pyfarm.agent.manager.tasks
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+:mod:`pyfarm.agent.utility` Utility Subpackage
+----------------------------------------------
 
 .. automodule:: pyfarm.agent.utility.retry
     :members:
