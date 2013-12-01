@@ -29,7 +29,6 @@ the index below.
 .. toctree::
     :maxdepth: 2
 
-    design/index
     requirements
     install
     environment
