@@ -55,12 +55,11 @@ supported databases see
 
 Python
 ------
-Below is a dynamic list of requirements constructed from PyFarm's `setup.py`
-script.  There's not currently a `requirements.txt` file associated with this
+There's not currently a `requirements.txt` file associated with this
 project because of the differences in dependencies between Python versions.
 PyFarm however can still be installed into a virtual environment using pip:::
 
-    pip install -e .
+    pip install -e . --egg
 
 By doing this you ``pip`` will download and install all the necessary
 requirements for your specific Python version and platform.
