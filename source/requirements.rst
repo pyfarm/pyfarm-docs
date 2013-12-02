@@ -33,8 +33,8 @@ Summary
         :widths: 10, 50
 
         :mod:`pyfarm.core`,2.5 - 2.7
-        :mod:`pyfarm.api`,2.5 - 2.7
         :mod:`pyfarm.agent`,2.5 - 2.7
+        :mod:`pyfarm.models`,2.6 - 2.7
         :mod:`pyfarm.master`,2.7 (2.6 should work too but is untested)
 
 * **Operation System** Linux, Mac, and Windows.  Some features may be limited
