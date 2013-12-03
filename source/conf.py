@@ -22,6 +22,7 @@ from datetime import datetime
 from os.path import abspath, join, dirname
 
 from pyfarm.core.logger import disable_logging
+
 disable_logging(True)
 
 # -- General configuration -----------------------------------------------------
@@ -60,20 +61,10 @@ root = abspath(join(dirname(__file__), ".."))
 docroot = join(root, "source")
 tmpdir = tempfile.mkdtemp(suffix="-pyfarm-docs")
 
-print "generating dynamic content"
-
-# Parse the __init__.py file instead of importing it.  So even if we
-# have code that can't be imported we can at least read the proper version
-# information
-print "..parsing version/author(s)"
-
-# General information about the project.
-
 now = datetime.now()
 copyright = "%s, %s" % (now.year, author)
 release = ".".join(map(str, parsed_version))
 version = ".".join(map(str, parsed_version[0:2]))
-
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -99,3 +90,7 @@ texinfo_documents = [
   ("index", "PyFarm", u"PyFarm Documentation",
    u"Oliver Palmer", "PyFarm", "A Python based distributed job system",
    "Miscellaneous")]
+
+sys.path.insert(0, ".")
+import conflib
+conflib.write_autogen_replacements("include/autogen_replacements.rst")
