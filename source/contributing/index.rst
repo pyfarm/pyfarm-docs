@@ -12,6 +12,7 @@
 .. See the License for the specific language governing permissions and
 .. limitations under the License.
 
+.. include:: ../include/autogen_replacements.rst
 
 Contributing To PyFarm
 ======================
@@ -37,10 +38,10 @@ Project Structure
 Sub-Projects
 ++++++++++++
 The project is broken down into several smaller sub-projects to aid in long
-term maintnance and isolation of code scope.  Generally speaking there are two
+term maintenance and isolation of code scope.  Generally speaking there are two
 kinds of sub-projects, supporting and operational.  ``Supporting`` sub-projects
 support all consumers of the project in some capacity (ex. documentation or
-deployment tools).  ``Operational`` sub-projects contain the code which operate
+deployment tools).  ``Operations`` sub-projects contain the code which operate
 PyFarm (ex. agent or master).  See the below table to get familiar with the
 various sub-projects as they will be referenced later on:
 
@@ -61,11 +62,13 @@ various sub-projects as they will be referenced later on:
     pyfarm_           Supporting  * project wide command line tools
                                   * development tools for tagging and deployment
                                     to PyPi
+                                  * supports Python versions |versions_pyfarm|
     pyfarm-docs_      Supporting  * source code to documentation in restructured
                                     text form
-                                  * pushes to this repo will:
+                                  * supports Python versions |versions_docs|
+                                  * pushes to this repository will:
                                       * build docs at https://readthedocs.org/builds/pyfarm/
-    pyfarm-core_      Operational * common library used by all other
+    pyfarm-core_      Operations  * common library used by all other
                                     operational type sub-projects containing
                                     standard library backports, enums, basic
                                     file handling, base logger, general
@@ -75,9 +78,34 @@ various sub-projects as they will be referenced later on:
                                     do this instead (ex. pyfarm-agent specifies
                                     the dependencies that the system information
                                     library needs)
-                                  * must support Python 2.5 until Python 3.0
-                                    support is added
-                                  * pushes to repo will:
+                                  * supports Python versions |versions_core|
+                                  * pushes to this repository will:
                                       * build at https://travis-ci.org/pyfarm/pyfarm-core
                                       * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-core
+    pyfarm-models_    Operations  * contains the database models which store
+                                    and retrieve data from the database
+                                  * supports Python versions |versions_models|
+                                  * pushes to this repository will:
+                                      * build at https://travis-ci.org/pyfarm/pyfarm-models
+                                      * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-models
+    pyfarm-agent_     Operations  * contains the code which runs on a remote
+                                    host which can run jobs, update the master
+                                    on a host's resources, and track progress of
+                                    individual commands
+                                  * supports Python versions |versions_agent|
+                                  * pushes to this repository will:
+                                      * build at https://travis-ci.org/pyfarm/pyfarm-agent
+                                      * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-agent
+    pyfarm-master_    Operations  * contains the code which runs the web ui
+                                    which serves as an administrative interface
+                                  * defines and hosts the REST api
+                                  * supports Python versions |versions_master|
+                                  * pushes to this repository will:
+                                      * build at https://travis-ci.org/pyfarm/pyfarm-master
+                                      * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-master
+    pyfarm-jobtypes_  Operations  * code which wraps around an individual
+                                    command to provide handling for failures,
+                                    log emissions, and other conditionals
+                                    related to job execution
+                                  * supports Python versions |versions_jobtypes|
     ================= =========== ==============================================
