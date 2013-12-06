@@ -219,6 +219,10 @@ be raised to is 2147483647.
     The default amount of ram, in megabytes, that is required for a job.
     **Default**: 32
 
+.. envvar:: PYFARM_REQUIRE_PRIVATE_IP
+
+    Whether pyfarm-master should reject agents with non-private IP addresses
+    **Default**: False
 
 Master
 ------
