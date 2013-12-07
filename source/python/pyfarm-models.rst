@@ -26,6 +26,16 @@
     :undoc-members:
     :show-inheritance:
 
+.. automodule:: pyfarm.models.jobtype
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.models.project
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 .. automodule:: pyfarm.models.task
     :members:
     :undoc-members:
@@ -37,8 +47,8 @@
     :show-inheritance:
 
 
-Models Core Subpackage
------------------------
+:mod:`pyfarm.models.core` Subpackage
+------------------------------------
 
 .. automodule:: pyfarm.models.core.cfg
     :members:

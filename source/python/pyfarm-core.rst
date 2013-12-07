@@ -38,6 +38,11 @@
     :undoc-members:
     :show-inheritance:
 
+.. automodule:: pyfarm.core.logger
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 .. automodule:: pyfarm.core.utility
     :members:
     :undoc-members:
@@ -48,11 +53,15 @@
     :undoc-members:
     :show-inheritance:
 
-
-System Information Subpackage
------------------------------
+:mod:`pyfarm.core.sysinfo` System Information Subpackage
+========================================================
 
 .. automodule:: pyfarm.core.sysinfo
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.core.sysinfo.cpu
     :members:
     :undoc-members:
     :show-inheritance:
@@ -67,12 +76,7 @@ System Information Subpackage
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.sysinfo.osdata
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-.. automodule:: pyfarm.core.sysinfo.processor
+.. automodule:: pyfarm.core.sysinfo.system
     :members:
     :undoc-members:
     :show-inheritance:
