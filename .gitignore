@@ -2,3 +2,4 @@
 build
 source/downloads*
 source/include/autogen_*
+.setup.py.last
