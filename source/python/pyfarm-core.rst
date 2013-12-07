@@ -54,7 +54,7 @@
     :show-inheritance:
 
 :mod:`pyfarm.core.sysinfo` System Information Subpackage
-========================================================
+--------------------------------------------------------
 
 .. automodule:: pyfarm.core.sysinfo
     :members:
