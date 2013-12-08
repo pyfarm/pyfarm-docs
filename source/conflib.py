@@ -141,3 +141,56 @@ def write_autogen_replacements(path):
     print "writing autogen replacements: %s" % path
     with open(path, "w") as stream:
         stream.write(data)
+
+
+def generate_autogen_agent_daemon_script():
+    local_path = join(
+        "..", "..", "pyfarm-agent", "pyfarm", "agent", "manager", "service.py")
+    if isfile(local_path):
+        with open(local_path, "r") as stream:
+            print "parsing agent daemons flags from %s" % realpath(local_path)
+            parsed = ast.parse(stream.read(), "")
+
+    else:
+        url = "https://raw.github.com/pyfarm/pyfarm-agent/master/" \
+              "pyfarm/agent/manager/service.py"
+        print "parsing agent daemons flags from %s" % url
+        parsed = ast.parse(urllib2.urlopen(url).read().strip(), "")
+
+    target = None
+    for node in ast.walk(parsed):
+        if isinstance(node, ast.Assign):
+            target = node.targets[0]
+            if isinstance(target, ast.Name) and target.id == "optParameters":
+                break
+
+    assert target is not None, "failed to find `optParameters`"
+
+    out = StringIO()
+    print >> out, ".. program:: agent"
+
+    for opt in node.value.elts:
+        print >> out
+        flag, _, default, desc = opt.elts
+        if isinstance(default, ast.Num):
+            default = default.n
+        elif isinstance(default, ast.Str):
+            default = default.s
+        else:
+            default = None
+
+        print >> out, ".. option:: --%s" % flag.s
+        print >> out
+        d = "   %s" % desc.s
+        if default is not None:
+            d += " (default: %s)" % default
+        print >> out, d
+
+    return out.getvalue()
+
+
+def write_autogen_agent_daemon_script(path):
+    data = generate_autogen_agent_daemon_script()
+    print "writing autogen twistd agent command line flags: %s" % path
+    with open(path, "w") as stream:
+        stream.write(data)

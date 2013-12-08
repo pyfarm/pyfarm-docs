@@ -31,6 +31,7 @@ the index below.
 
     contributing/index
     environment
+    commands
     python/modules
     license
 
