@@ -2,4 +2,5 @@
 build
 source/downloads*
 source/include/autogen_*
+*.pyc
 .setup.py.last
