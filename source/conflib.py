@@ -152,8 +152,8 @@ def generate_autogen_agent_daemon_script():
             parsed = ast.parse(stream.read(), "")
 
     else:
-        url = "https://raw.github.com/pyfarm/pyfarm-agent/master/" \
-              "pyfarm/agent/manager/service.py"
+        url = "https://raw.github.com/pyfarm/pyfarm-agent/master" \
+              "/pyfarm/agent/service.py"
         print "parsing agent daemons flags from %s" % url
         parsed = ast.parse(urllib2.urlopen(url).read().strip(), "")
 
@@ -181,7 +181,11 @@ def generate_autogen_agent_daemon_script():
 
         print >> out, ".. option:: --%s" % flag.s
         print >> out
-        d = "   %s" % desc.s
+        if isinstance(desc, ast.BinOp):
+            d = ""
+        else:
+            d = "   %s" % desc.s
+
         if default is not None:
             d += " (default: %s)" % default
         print >> out, d
