@@ -21,27 +21,62 @@
     :undoc-members:
     :show-inheritance:
 
+.. automodule:: pyfarm.agent.service
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.agent.tasks
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
 
 :mod:`pyfarm.agent.http` Manager Subpackage
 -------------------------------------------
+
+.. automodule:: pyfarm.agent.http.assign
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 .. automodule:: pyfarm.agent.http.client
     :members:
     :undoc-members:
     :show-inheritance:
 
-
-
-:mod:`pyfarm.agent.manager` Manager Subpackage
-----------------------------------------------
-
-.. automodule:: pyfarm.agent.manager.service
+.. automodule:: pyfarm.agent.http.resource
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. automodule:: pyfarm.agent.manager.tasks
+.. automodule:: pyfarm.agent.http.server
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`pyfarm.agent.process` Utility Subpackage
+----------------------------------------------
+
+.. automodule:: pyfarm.agent.process.logger
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+.. automodule:: pyfarm.agent.process.manager
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.agent.process.protocol
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+.. automodule:: pyfarm.agent.process.spawn
     :members:
     :undoc-members:
     :show-inheritance:
@@ -50,13 +85,19 @@
 :mod:`pyfarm.agent.utility` Utility Subpackage
 ----------------------------------------------
 
+.. automodule:: pyfarm.agent.utility.objects
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
 .. automodule:: pyfarm.agent.utility.retry
     :members:
     :undoc-members:
     :show-inheritance:
 
 
-.. automodule:: pyfarm.agent.utility.tasks
+.. automodule:: pyfarm.agent.utility.sqlite
     :members:
     :undoc-members:
     :show-inheritance:
