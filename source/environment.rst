@@ -288,6 +288,7 @@ processed.
     is set to ``True``.
 
 .. envvar:: PYFARM_JOBTYPE_SUBCLASSES_BASE_CLASS
+
     If ``True`` then job types which do not subclass from
     :class:`pyfarm.jobtypes.core.jobtype.JobType` will raise an exception
     when work is assigned.  By default, this value is set to ``True``.
