@@ -272,3 +272,22 @@ master.
     the lines of::
 
         https://$hostname/$PYFARM_API_PREFIX$PYFARM_API_VERSION
+
+
+Job Type
+--------
+Environment variables that are used to read, configure, or run a job
+type.  Unless stated otherwise all of these environment variables are
+evaluated on the agent either before a job is launched or while it's being
+processed.
+
+.. envvar:: PYFARM_JOBTYPE_ALLOW_CODE_EXECUTION_IN_MODULE_ROOT
+
+    If ``True``, then function calls in the root of a job types's source code
+    will result in an error when the work is assigned.  By default, this value
+    is set to ``True``.
+
+.. envvar:: PYFARM_JOBTYPE_SUBCLASSES_BASE_CLASS
+    If ``True`` then job types which do not subclass from
+    :class:`pyfarm.jobtypes.core.jobtype.JobType` will raise an exception
+    when work is assigned.  By default, this value is set to ``True``.
