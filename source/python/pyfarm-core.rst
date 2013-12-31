@@ -48,10 +48,6 @@
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.core.warning
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 :mod:`pyfarm.core.sysinfo` System Information Subpackage
 --------------------------------------------------------
