@@ -49,6 +49,4 @@ setup(
     version="0.7.0",
     cmdclass={"install": Install},
     install_requires=[
-        "sphinx", "sphinxcontrib-httpdomain", "netaddr", "netifaces",
-        "flask", "flask-sqlalchemy", "flask-login", "psutil", "pyOpenSSL",
-        "ntplib", "requests"])
+        "sphinx", "sphinxcontrib-httpdomain"])
