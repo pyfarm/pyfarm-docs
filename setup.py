@@ -23,27 +23,6 @@ assert sys.version_info[0:2] >= (2, 6), "Python 2.6 or higher is required"
 # means it does not always pickup our custom install clas
 
 from setuptools import setup
-from setuptools.command import easy_install
-from setuptools.command.install import install
-from distutils.command.install import install as _install
-
-
-class Install(install):
-    def run(self):
-        # easy_install from urls
-        install_urls = [
-            "https://github.com/pyfarm/pyfarm-core/archive/master.zip",
-            "https://github.com/pyfarm/pyfarm-agent/archive/master.zip",
-            "https://github.com/pyfarm/pyfarm-master/archive/master.zip",
-            "https://github.com/pyfarm/pyfarm-models/archive/master.zip",
-            "https://github.com/pyfarm/pyfarm-jobtypes/archive/master.zip"]
-        easy_install.main(install_urls)
-
-        # regular install command
-        if self.old_and_unmanageable or self.single_version_externally_managed:
-            _install.run(self)
-        else:
-            self.do_egg_install()
 
 install_requires = [
     "sphinx",
@@ -56,5 +35,4 @@ if "READTHEDOCS" not in os.environ:
 setup(
     name="pyfarm-docs",
     version="0.7.0",
-    cmdclass={"install": Install},
     install_requires=install_requires)

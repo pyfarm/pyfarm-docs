@@ -1,0 +1,26 @@
+Flask
+Flask-Admin
+Flask-Login
+Flask-SQLAlchemy
+SQLAlchemy
+Sphinx
+Twisted
+WTForms
+argparse
+netaddr
+netifaces-merged
+ntplib
+psutil==1.2.1
+pyOpenSSL
+-e git+git@github.com:pyfarm/pyfarm-docs.git@master#egg=pyfarm_docs-dev
+-e git+git@github.com:pyfarm/pyfarm-agent.git@master#egg=pyfarm.agent-dev
+-e git+git@github.com:pyfarm/pyfarm-core.git@master#egg=pyfarm.core-dev
+-e git+git@github.com:pyfarm/pyfarm-jobtypes.git@master#egg=pyfarm.jobtypes-dev
+-e git+git@github.com:pyfarm/pyfarm-master.git@master#egg=pyfarm.master-dev
+-e git+git@github.com:pyfarm/pyfarm-models.git@master#egg=pyfarm.models-dev
+requests
+sphinxcontrib-httpdomain
+sphinxcontrib-programoutput
+txTemplate
+voluptuous
+wsgiref
