@@ -104,11 +104,4 @@ sys.path.insert(0, ".")
 import conflib
 conflib.write_autogen_replacements(
     "include/autogen_replacements.rst")
-
-print "="*50
-import os
-from os.path import join
-from pprint import pformat
-print pformat(os.environ.data)
-print pformat(os.listdir(join(os.environ["VIRTUAL_ENV"], "bin")))
-print "="*50
+conflib.install_entry_points()

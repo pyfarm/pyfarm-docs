@@ -14,16 +14,31 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sys
 import ast
-import tempfile
+import os
+import pkg_resources
 import shutil
+import sys
+import tempfile
 import urllib2
-from StringIO import StringIO
 from collections import namedtuple
+from StringIO import StringIO
 from os.path import join, isfile, realpath
+from stat import S_IRUSR, S_IXUSR, S_IRGRP, S_IXGRP, S_IROTH, S_IXOTH
+from textwrap import dedent
+
 
 UNSUPPORTED = object()
+ENTRYPOINT_TEMPLATE = dedent("""
+#!%(python)s
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+    load_entry_point('%(module)s', 'console_scripts', '%(name)s')()
+)
+""")
+
 
 # locations we search for setup.py
 TEMPLATE_URL = "https://raw.github.com/pyfarm/%(repo)s/master/setup.py"
@@ -142,8 +157,31 @@ def write_autogen_replacements(path):
     with open(path, "w") as stream:
         stream.write(data)
 
+
 def write_autogen_agent_daemon_script(path):
     data = generate_autogen_agent_daemon_script()
     print "writing autogen twistd agent command line flags: %s" % path
     with open(path, "w") as stream:
         stream.write(data)
+
+def install_entry_points():
+    for entry_point in pkg_resources.iter_entry_points("console_scripts"):
+        if entry_point.module_name.startswith("pyfarm."):
+            entry_point_script = ENTRYPOINT_TEMPLATE % {
+                "python": sys.executable,
+                "module": ".".join(entry_point.module_name.split(".")[:2]),
+                "name": entry_point.name
+            }
+            destination = join(
+                os.environ["VIRTUAL_ENV"], "bin", entry_point.name)
+
+            if isfile(destination):
+                print "entry point exists %s" % destination
+                continue
+
+            with open(destination, "w") as destination_file:
+                destination_file.write(entry_point_script)
+                print "wrote console script %s" % destination
+
+            os.chmod(
+                destination, S_IRUSR|S_IXUSR|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH)
