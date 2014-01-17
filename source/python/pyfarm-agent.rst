@@ -16,11 +16,6 @@
 :mod:`pyfarm.agent` Package
 ===========================
 
-.. automodule:: pyfarm.agent.protocols
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 .. automodule:: pyfarm.agent.service
     :members:
     :undoc-members:
