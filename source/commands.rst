@@ -34,27 +34,7 @@ the options available for each command please see the sections below.
 pyfarm-agent
 %%%%%%%%%%%%
 
-Common Options
-~~~~~~~~~~~~~~
-
-.. program-output:: pyfarm-agent --help
-    :shell:
-
-
-Start Command
-~~~~~~~~~~~~~
-
-.. program-output:: pyfarm-agent start --help
-    :shell:
-
-
-Stop Command
-~~~~~~~~~~~~
-
-.. program-output:: pyfarm-agent stop --help
-    :shell:
-
-
+**TODO**
 
 
 Master
@@ -69,5 +49,4 @@ command line tool can be used.  Please note that much like in production
 pyfarm-master
 %%%%%%%%%%%%%
 
-.. program-output:: pyfarm-master --help
-    :shell:
+**TODO**

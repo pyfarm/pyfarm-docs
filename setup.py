@@ -26,8 +26,7 @@ from setuptools import setup
 
 install_requires = [
     "sphinx",
-    "sphinxcontrib-httpdomain", 
-    "sphinxcontrib-programoutput"]
+    "sphinxcontrib-httpdomain"]
 
 if "READTHEDOCS" not in os.environ:
     install_requires += ["sphinx_rtd_theme"]

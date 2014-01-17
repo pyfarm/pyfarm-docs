@@ -20,7 +20,6 @@ pyOpenSSL
 -e git://github.com/pyfarm/pyfarm-models.git#egg=pyfarm.models-dev
 requests
 sphinxcontrib-httpdomain
-sphinxcontrib-programoutput
 txTemplate
 voluptuous
 wsgiref
