@@ -44,12 +44,16 @@ class Install(install):
         else:
             self.do_egg_install()
 
+install_requires = [
+    "sphinx",
+    "sphinxcontrib-httpdomain", 
+    "sphinxcontrib-programoutput"]
+
+if "READTHEDOCS" not in os.environ:
+    install_requires += ["sphinx_rtd_theme"]
+
 setup(
     name="pyfarm-docs",
     version="0.7.0",
     cmdclass={"install": Install},
-    install_requires=[
-        "sphinx",
-        "sphinxcontrib-httpdomain", 
-        "sphinxcontrib-programoutput",
-        "sphinx_rtd_theme"])
+    install_requires=install_requires)
