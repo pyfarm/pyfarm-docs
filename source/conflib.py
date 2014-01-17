@@ -165,6 +165,10 @@ def write_autogen_agent_daemon_script(path):
         stream.write(data)
 
 def install_entry_points():
+    """
+    this is here because they don't always get installed (especially on
+    read the docs it seems
+    """
     for entry_point in pkg_resources.iter_entry_points("console_scripts"):
         if entry_point.module_name.startswith("pyfarm."):
             entry_point_script = ENTRYPOINT_TEMPLATE % {
@@ -180,7 +184,7 @@ def install_entry_points():
                 continue
 
             with open(destination, "w") as destination_file:
-                destination_file.write(entry_point_script)
+                destination_file.write(entry_point_script.strip())
                 print "wrote console script %s" % destination
 
             os.chmod(
