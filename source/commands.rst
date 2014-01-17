@@ -43,7 +43,7 @@ Common Options
 Start Command
 ~~~~~~~~~~~~~
 
-.. program-output:: pyfarm-agent start --help
+.. program-output:: python pyfarm-agent start --help
 
 
 

@@ -30,14 +30,14 @@ from textwrap import dedent
 
 UNSUPPORTED = object()
 ENTRYPOINT_TEMPLATE = dedent("""
-#!%(python)s
+#!/usr/bin/env python
 import sys
 from pkg_resources import load_entry_point
 
-sys.exit(
-    load_entry_point('%(module)s', 'console_scripts', '%(name)s')()
-)
-""")
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('%(module)s', 'console_scripts', '%(name)s')()
+    )""").strip()
 
 
 # locations we search for setup.py
@@ -172,7 +172,7 @@ def install_entry_points():
     for entry_point in pkg_resources.iter_entry_points("console_scripts"):
         if entry_point.module_name.startswith("pyfarm."):
             entry_point_script = ENTRYPOINT_TEMPLATE % {
-                "python": sys.executable,
+                #"python": sys.executable,
                 "module": ".".join(entry_point.module_name.split(".")[:2]),
                 "name": entry_point.name
             }
@@ -184,8 +184,8 @@ def install_entry_points():
                 continue
 
             with open(destination, "w") as destination_file:
-                destination_file.write(entry_point_script.strip())
+                destination_file.write(entry_point_script)
                 print "wrote console script %s" % destination
 
             os.chmod(
-                destination, S_IRUSR|S_IXUSR|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH)
+                destination, 0o777) # it's not THAT important
