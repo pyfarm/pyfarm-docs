@@ -49,4 +49,6 @@ setup(
     version="0.7.0",
     cmdclass={"install": Install},
     install_requires=[
-        "sphinx", "sphinxcontrib-httpdomain"])
+        "sphinx", 
+        "sphinxcontrib-httpdomain", 
+        "sphinxcontrib-programoutput"])

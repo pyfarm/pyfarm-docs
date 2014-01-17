@@ -39,7 +39,8 @@ extensions = [
     "sphinx.ext.ifconfig",
     "sphinx.ext.viewcode",
     "sphinx.ext.intersphinx",
-    "sphinxcontrib.httpdomain"]
+    "sphinxcontrib.httpdomain",
+    "sphinxcontrib.programoutput"]
 
 pymajor, pyminor = sys.version_info[0:2]
 intersphinx_mapping = {
@@ -95,5 +96,3 @@ sys.path.insert(0, ".")
 import conflib
 conflib.write_autogen_replacements(
     "include/autogen_replacements.rst")
-conflib.write_autogen_agent_daemon_script(
-    "include/autogen_command_agent_daemon.rst")

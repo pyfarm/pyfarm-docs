@@ -25,10 +25,45 @@ PyFarm has several commands for managing, running, testing, and development.
 Agent
 -----
 
-The agent is run using Twisted's ``twistd`` application which starts a
-daemon on the local machine.  ``twistd`` can run the daemon as another user
-or even launch the agent directly using the ``-n`` flag.  For help with
-``twistd`` see ``-h`` or for help with the agent flags you can run
-``twistd pyfarm.agent -n``
+The agent is controlled the ``pyfarm-agent`` command which has numerous flags
+for controlling everything from starting the agent to how it should terminate
+as well as how it should interact with the master.  For more information on
+the options available for each command please see the sections below.
 
-.. include:: include/autogen_command_agent_daemon.rst
+
+pyfarm-agent
+%%%%%%%%%%%%
+
+Common Options
+~~~~~~~~~~~~~~
+
+.. program-output:: pyfarm-agent --help
+
+
+Start Command
+~~~~~~~~~~~~~
+
+.. program-output:: pyfarm-agent start --help
+
+
+
+Stop Command
+~~~~~~~~~~~~
+
+.. program-output:: pyfarm-agent stop --help
+
+
+
+Master
+------
+
+In production the master will typically be run by WSGI server such as uWSGI 
+however when working locally or developing something new the ``pyfarm-master``
+command line tool can be used.  Please note that much like in production 
+``pyfarm-master`` is primarily configured using environment variables.
+
+
+pyfarm-master
+%%%%%%%%%%%%%
+
+.. program-output:: pyfarm-master --help
