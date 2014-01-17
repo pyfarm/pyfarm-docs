@@ -49,6 +49,7 @@ setup(
     version="0.7.0",
     cmdclass={"install": Install},
     install_requires=[
-        "sphinx", 
+        "sphinx",
         "sphinxcontrib-httpdomain", 
-        "sphinxcontrib-programoutput"])
+        "sphinxcontrib-programoutput",
+        "sphinx_rtd_theme"])
