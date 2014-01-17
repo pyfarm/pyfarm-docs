@@ -23,6 +23,7 @@ before_script:
 install:
   - mkdir $HOME/.pip/ && curl https://raw.github.com/pyfarm/pyfarm/master/misc/travis_pip.conf -o $HOME/.pip/pip.conf
   - if [[ $TDB_DRIVER != "" ]]; then pip install $TDB_DRIVER; fi
+  - pip install -r requirements.txt
   - python setup.py install
 
 script:
