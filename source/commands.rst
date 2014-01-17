@@ -38,19 +38,22 @@ Common Options
 ~~~~~~~~~~~~~~
 
 .. program-output:: pyfarm-agent --help
+    :shell:
 
 
 Start Command
 ~~~~~~~~~~~~~
 
-.. program-output:: python pyfarm-agent start --help
-
+.. program-output:: pyfarm-agent start --help
+    :shell:
 
 
 Stop Command
 ~~~~~~~~~~~~
 
 .. program-output:: pyfarm-agent stop --help
+    :shell:
+
 
 
 
@@ -67,3 +70,4 @@ pyfarm-master
 %%%%%%%%%%%%%
 
 .. program-output:: pyfarm-master --help
+    :shell:
