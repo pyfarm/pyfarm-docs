@@ -45,7 +45,6 @@ REPOS = (
     "pyfarm",
     "pyfarm-docs",
     "pyfarm-core",
-    "pyfarm-models",
     "pyfarm-agent",
     "pyfarm-jobtypes",
     "pyfarm-master")
