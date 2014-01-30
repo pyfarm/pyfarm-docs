@@ -94,7 +94,7 @@ Master Entrypoints Subpackage
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.master.entrypoints.master
+.. automodule:: pyfarm.master.entrypoints.main
     :members:
     :undoc-members:
     :show-inheritance:
