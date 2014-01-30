@@ -17,7 +17,6 @@ pyOpenSSL
 -e git://github.com/pyfarm/pyfarm-core.git#egg=pyfarm.core-dev
 -e git://github.com/pyfarm/pyfarm-jobtypes.git#egg=pyfarm.jobtypes-dev
 -e git://github.com/pyfarm/pyfarm-master.git#egg=pyfarm.master-dev
--e git://github.com/pyfarm/pyfarm-models.git#egg=pyfarm.models-dev
 requests
 sphinxcontrib-httpdomain
 txTemplate
