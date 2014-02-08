@@ -32,7 +32,6 @@ overall project but generally they fall under either documentation, bug fixes,
 features, or testing.  With that in mind, if you're looking to contribute to
 any of these three areas then read on to get started.
 
-
 Project Structure
 -----------------
 Sub-Projects
@@ -49,10 +48,8 @@ various sub-projects as they will be referenced later on:
 .. _pyfarm: https://github.com/pyfarm/pyfarm
 .. _pyfarm-docs: https://github.com/pyfarm/pyfarm-docs
 .. _pyfarm-core: https://github.com/pyfarm/pyfarm-core
-.. _pyfarm-models: https://github.com/pyfarm/pyfarm-models
 .. _pyfarm-master: https://github.com/pyfarm/pyfarm-master
 .. _pyfarm-agent: https://github.com/pyfarm/pyfarm-agent
-.. _pyfarm-jobtypes: https://github.com/pyfarm/pyfarm-jobtypes
 
 .. table:: **Sub-Projects of PyFarm**
 
@@ -82,12 +79,6 @@ various sub-projects as they will be referenced later on:
                                   * pushes to this repository will:
                                       * build at https://travis-ci.org/pyfarm/pyfarm-core
                                       * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-core
-    pyfarm-models_    Operations  * contains the database models which store
-                                    and retrieve data from the database
-                                  * supports Python versions |versions_models|
-                                  * pushes to this repository will:
-                                      * build at https://travis-ci.org/pyfarm/pyfarm-models
-                                      * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-models
     pyfarm-agent_     Operations  * contains the code which runs on a remote
                                     host which can run jobs, update the master
                                     on a host's resources, and track progress of
@@ -96,16 +87,21 @@ various sub-projects as they will be referenced later on:
                                   * pushes to this repository will:
                                       * build at https://travis-ci.org/pyfarm/pyfarm-agent
                                       * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-agent
+                                  * code which wraps around an individual
+                                    command to provide handling for failures,
+                                    log emissions, and other conditionals
+                                    related to job execution
     pyfarm-master_    Operations  * contains the code which runs the web ui
                                     which serves as an administrative interface
+                                  * contains the database models which store
+                                    and retrieve data from the database
                                   * defines and hosts the REST api
                                   * supports Python versions |versions_master|
                                   * pushes to this repository will:
                                       * build at https://travis-ci.org/pyfarm/pyfarm-master
                                       * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-master
-    pyfarm-jobtypes_  Operations  * code which wraps around an individual
-                                    command to provide handling for failures,
-                                    log emissions, and other conditionals
-                                    related to job execution
-                                  * supports Python versions |versions_jobtypes|
     ================= =========== ==============================================
+
+
+
+.. include:: codestyle.rst
