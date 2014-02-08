@@ -36,9 +36,12 @@ TEMPLATE_PATH = join("..", "..", "%(repo)s", "setup.py")
 VERSION = namedtuple(
     "version_info", ["major", "minor", "micro", "releaselevel", "serial"])
 PYTHON_VERSIONS = (
-    VERSION(major=2, minor=5, micro=5, releaselevel="final", serial=0),
     VERSION(major=2, minor=6, micro=9, releaselevel="final", serial=0),
-    VERSION(major=2, minor=7, micro=9, releaselevel="final", serial=0))
+    VERSION(major=2, minor=7, micro=9, releaselevel="final", serial=0),
+    VERSION(major=3, minor=0, micro=0, releaselevel="final", serial=0),
+    VERSION(major=3, minor=1, micro=0, releaselevel="final", serial=0),
+    VERSION(major=3, minor=2, micro=0, releaselevel="final", serial=0),
+    VERSION(major=3, minor=3, micro=0, releaselevel="final", serial=0))
 
 # the repos we should construct the requirements for
 REPOS = (
@@ -46,7 +49,6 @@ REPOS = (
     "pyfarm-docs",
     "pyfarm-core",
     "pyfarm-agent",
-    "pyfarm-jobtypes",
     "pyfarm-master")
 
 
