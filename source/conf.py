@@ -71,6 +71,14 @@ version = ".".join(map(str, parsed_version[0:2]))
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 exclude_patterns = ["include/*", "downloads/*"]
+
+# documents we don't care about including....yet
+# TODO: readd and refine these pages close to release
+exclude_patterns += [
+    "*install.rst",
+    "*requirements.rst"
+]
+
 pygments_style = "sphinx"
 html_static_path = ["_static"]
 htmlhelp_basename = "PyFarmdoc"
