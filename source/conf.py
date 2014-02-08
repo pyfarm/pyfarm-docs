@@ -80,7 +80,7 @@ exclude_patterns += [
 ]
 
 pygments_style = "sphinx"
-html_static_path = ["_static"]
+html_static_path = []
 htmlhelp_basename = "PyFarmdoc"
 latex_elements = {}
 
