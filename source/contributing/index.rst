@@ -32,6 +32,14 @@ overall project but generally they fall under either documentation, bug fixes,
 features, or testing.  With that in mind, if you're looking to contribute to
 any of these three areas then read on to get started.
 
+Developer Resources
+-------------------
+Below are some resources which are for developers wishing to contribute to
+PyFarm.
+
+.. toctree::
+    codestyle
+
 Project Structure
 -----------------
 Sub-Projects
@@ -102,6 +110,3 @@ various sub-projects as they will be referenced later on:
                                       * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-master
     ================= =========== ==============================================
 
-
-
-.. include:: codestyle.rst
