@@ -21,11 +21,6 @@
     :undoc-members:
     :show-inheritance:
 
-.. automodule:: pyfarm.master.errors
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 .. automodule:: pyfarm.master.index
     :members:
     :undoc-members:
