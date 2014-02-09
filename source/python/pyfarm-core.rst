@@ -16,11 +16,6 @@
 :mod:`pyfarm.core` Package
 ==========================
 
-.. automodule:: pyfarm.core.backports
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 .. automodule:: pyfarm.core.cmdargs
     :members:
     :undoc-members:
