@@ -82,6 +82,7 @@ exclude_patterns += [
 pygments_style = "sphinx"
 html_static_path = []
 htmlhelp_basename = "PyFarmdoc"
+linkcheck_timeout = 120
 latex_elements = {}
 
 if "READTHEDOCS" not in os.environ:
