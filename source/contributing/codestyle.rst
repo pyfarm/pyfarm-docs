@@ -54,12 +54,13 @@ any difference between two however all code, strings, error messages, etc
 should use ``"``.  The exception to this rule is if you need ``"`` inside of
 a string, then you should use ``'``: ``'hello "world"'``.  The reason for this
 rule is two parts:
+
     * it's easy to be, and often is, inconsistent when you mix ``'`` and ``"``
     * developers from other languages, such as C++, are more more used to
       using ``"`` for strings instead of ``'``
 
-Documentation
-`````````````
+Standard Documentation
+``````````````````````
 Docstrings are high encouraged for all callable functions, methods,
 classmethods, and staticmethods.  When creating a docstring please use ``"""``
 instead of ``'''`` to enclose the documentation.
@@ -75,6 +76,81 @@ instead of ``'''`` to enclose the documentation.
         use multiple lines you should keep the left and right side of
         the opening and closing quotes clear.
         """
+
+Endpoint Documentation
+``````````````````````
+A large part of PyFarm is :mod:`pyfarm.master` which includes HTTP endpoints
+serving as the master's API.  It's important to document these using the
+:mod:`sphinxcontrib.httpdomain` syntax so it's readable.  Take special note
+that in the top level url the type and name of the thing being posted is in
+the url, ``<str:item>``, however in the examples it's the real text.
+
+.. code-block:: python
+
+    from flask.views import MethodView
+    class FooItemsAPI(MethodView):
+        def post(self, item=None):
+            """
+            ``POST`` method which
+
+            .. http:post:: /api/v1/foo/<str:item> HTTP/1.1
+
+                **Request**
+
+                .. sourcecode:: http
+
+                    POST /api/v1/foo/foobar HTTP/1.1
+                    Accept: application/json
+
+                    {
+                        "item": "foobar"
+                    }
+
+                **Response (new item created)**
+
+                .. sourcecode:: http
+
+                    HTTP/1.1 201 CREATED
+                    Content-Type: application/json
+
+                    {
+                        "item": "foobar",
+                        "id": 1
+                    }
+
+            :statuscode 200: an existing tag was found and returned
+            :statuscode 201: a new tag was created
+        """
+
+Which ends up looking like this when rendered:
+
+.. http:post:: /api/v1/foo/<str:item> HTTP/1.1
+
+    **Request**
+
+    .. sourcecode:: http
+
+        POST /api/v1/foo/foobar HTTP/1.1
+        Accept: application/json
+
+        {
+            "item": "foobar"
+        }
+
+    **Response (agent newly tagged)**
+
+    .. sourcecode:: http
+
+        HTTP/1.1 201 CREATED
+        Content-Type: application/json
+
+        {
+            "item": "foobar",
+            "id": 1
+        }
+
+:statuscode 200: an existing tag was found and returned
+:statuscode 201: a new tag was created
 
 Line Continuations
 ``````````````````
@@ -109,6 +185,66 @@ should use a line continuation if it can't be split up otherwise.
     if a == b and c == d and a == b \
             or a and b and c and d:
         pass
+
+
+HTTP Endpoints
+++++++++++++++
+URL Formatting
+``````````````
+The following rules should be applied when constructing an HTTP endpoint:
+
+    * endpoints referring to objects should be plural so ``/items/`` instead
+      of ``/item/``
+    * any endpoint that's not referring to a specific document should
+      contain a trailing slash: ``/items/``
+    * endpoints that refer to a specific document shouldn't contain a
+      trailing slash ``/items/1``
+    * when working with groups of items under a single item the trailing
+      slash should be added ``/items/1/children/``
+    * any endpoint that's an API should contain a version number
+      ``/api/v1/items/``
+
+
+Validating Data in API Endpoints
+````````````````````````````````
+Most of the time you'll want a standard way of validating the incoming
+request before you have to deal with it yourself.  For this there's the
+:func:`validate_with_model <pyfarm.master.utility.validate_with_model>`
+function that in combination with
+:func:`before_request <pyfarm.master.application.before_request>` will:
+
+    * ensure the incoming data to the API is json
+    * test the incoming data to ensure it has all the required keys
+    * test to make sure the incoming data does not contain keys that don't
+      exist in the table
+    * check to ensure that all data included matches the expected types based
+      on the types in the model
+    * set ``flask.g.json`` if all of the above proceed without problems
+    * return a useful error message in response to the request if there's
+      problems
+
+A short example of how this works is below
+
+.. code-block:: python
+
+    try:
+        from httplib import CREATED
+    except ImportError:  # pragma: no cover
+        from http.client import CREATED
+
+    from flask import g
+    from pyfarm.master.application import app, db
+    from pyfarm.master.utility import validate_with_model, jsonify
+    from pyfarm.models.tag import Tag
+
+    # NOTE: this is an example only, not functional code as it does not
+    # setup the route
+    @validate_with_model(Tag)  # does all the validation in the points above
+    def put_tag():
+        model = Tag(**g.json)
+        db.session.add(model)
+        db.session.commit()
+        return jsonify(model.to_dict()), CREATED
 
 
 
