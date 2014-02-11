@@ -277,9 +277,12 @@ master.
 Job Type
 --------
 Environment variables that are used to read, configure, or run a job
-type.  Unless stated otherwise all of these environment variables are
-evaluated on the agent either before a job is launched or while it's being
-processed.
+type.
+
+Agent Side
+~~~~~~~~~~
+Environment variables that serve to define default behaviors or values
+for job types on the agent.
 
 .. envvar:: PYFARM_JOBTYPE_ALLOW_CODE_EXECUTION_IN_MODULE_ROOT
 
@@ -292,3 +295,23 @@ processed.
     If ``True`` then job types which do not subclass from
     :class:`pyfarm.jobtypes.core.jobtype.JobType` will raise an exception
     when work is assigned.  By default, this value is set to ``True``.
+
+Database Side
+~~~~~~~~~~~~~
+Environment variables that serve to define default values for a job type
+object in the database.
+
+.. envvar:: JOBTYPE_DEFAULT_MAX_BATCH
+
+    Performs the same function as :envvar:`PYFARM_QUEUE_MAX_BATCH` but provides
+    an override specifically for :attr:`pyfarm.models.jobtype.JobType.max_batch`
+
+.. envvar:: JOBTYPE_DEFAULT_BATCH_CONTIGUOUS
+
+    Sets the default value for
+    :attr:`pyfarm.models.jobtype.JobType.batch_contiguous`
+
+.. envvar:: JOBTYPE_DEFAULT_BATCH_NON_CONTIGUOUS
+
+    Sets the default value for
+    :attr:`pyfarm.models.jobtype.JobType.batch_non_contiguous`
