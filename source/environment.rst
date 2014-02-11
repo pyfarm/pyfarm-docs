@@ -310,8 +310,3 @@ object in the database.
 
     Sets the default value for
     :attr:`pyfarm.models.jobtype.JobType.batch_contiguous`
-
-.. envvar:: JOBTYPE_DEFAULT_BATCH_NON_CONTIGUOUS
-
-    Sets the default value for
-    :attr:`pyfarm.models.jobtype.JobType.batch_non_contiguous`
