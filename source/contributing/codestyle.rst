@@ -328,9 +328,10 @@ so we can find and better handle these errors in the future.
 
     # always document exactly why you're suppressing
     # all unhandled exceptions.  Generally speaking there
-    # are very cases where this should ever be a standard
+    # are **very few** cases where this should ever be a standard
     # practice.
     except Exception as e:
+        logger.exception(e)  # this is sometimes skipped
         logger.warning("unhandled exception: %s", e)
         pass
 
