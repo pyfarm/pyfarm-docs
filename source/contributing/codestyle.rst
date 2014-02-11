@@ -302,7 +302,7 @@ formatter
 Don't Capitalize Partial or Single Sentences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Messages are not really complete sentences in the general sense so we don't
-generally teams them as such here.
+treat them as such here either.
 
 .. note::
 
