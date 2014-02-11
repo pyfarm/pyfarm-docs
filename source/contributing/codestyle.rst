@@ -301,6 +301,15 @@ formatter
 
 Don't Capitalize Partial or Single Sentences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Messages are not really complete sentences in the general sense so we don't
+generally teams them as such here.
+
+.. note::
+
+    This rule also applies to responses too:
+
+    ``jsonify(error="this is an error")``
+
 .. code-block:: python
 
     logger.info("this is a single sentence so no capitalization")
@@ -510,6 +519,13 @@ import system do the work for you.
         _range = xrange
     except NameError:  # pragma: no cover
         _range = range
+
+    # for attributes which have changed
+    data = {}
+    try:
+        items = data.iteritems
+    except AttributeError:
+        items = data.items
 
 Backwards Compatible Imports
 ````````````````````````````
