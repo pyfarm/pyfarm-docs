@@ -298,26 +298,6 @@ formatter
     logger.info("data: %r", data)
 
 
-
-Don't Capitalize Partial or Single Sentences
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Messages are not really complete sentences in the general sense so we don't
-treat them as such here either.
-
-.. note::
-
-    This rule also applies to responses too:
-
-    ``jsonify(error="this is an error")``
-
-.. code-block:: python
-
-    logger.info("this is a single sentence so no capitalization")
-    logger.info("There's two sentences here now.  So you should "
-                "capitalize them both.")
-
-
-
 Exceptions and Errors
 +++++++++++++++++++++
 At some point you'll have to handle or produce exception within PyFarm.
