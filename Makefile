@@ -55,13 +55,12 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 
 clean:
-	-rm -rf $(BUILDDIR)/*
+	-rm -rfv $(BUILDDIR)/* source/modules/*.rst
 
 api:
-	-rm source/python/*
-	-sphinx-apidoc $(PYFARM_ROOT) --output-dir=source/python
+	-python script_apidocs.py source/modules/
 
-html:
+html: api
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

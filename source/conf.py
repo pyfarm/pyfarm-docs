@@ -22,10 +22,6 @@ import tempfile
 from datetime import datetime
 from os.path import abspath, join, dirname
 
-from pyfarm.core.logger import disable_logging
-
-disable_logging(True)
-
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
