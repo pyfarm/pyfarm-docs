@@ -4,3 +4,4 @@ source/downloads*
 source/include/autogen_*
 *.pyc
 .setup.py.last
+source/modules/pyfarm*rst
