@@ -15,15 +15,17 @@
 # limitations under the License.
 
 import ast
-import os
-import pkg_resources
 import shutil
 import sys
 import tempfile
 import urllib2
-from collections import namedtuple
 from StringIO import StringIO
-from os.path import join, isfile, realpath
+from os.path import join, isfile, realpath, dirname
+from collections import namedtuple
+from importlib import import_module
+from inspect import getfile
+from sphinx import apidoc
+from textwrap import dedent
 
 
 UNSUPPORTED = object()
@@ -152,3 +154,49 @@ def write_autogen_agent_daemon_script(path):
     print "writing autogen twistd agent command line flags: %s" % path
     with open(path, "w") as stream:
         stream.write(data)
+
+
+def write_module_docs(root):
+    def make_options(**kwargs):
+        return namedtuple("DummyOptions", kwargs.keys())(**kwargs)
+
+    packages = (
+        "pyfarm.core",
+        "pyfarm.models",
+        "pyfarm.master",
+        "pyfarm.scheduler",
+        "pyfarm.agent",
+        "pyfarm.jobtypes")
+    modules = map(import_module, packages)
+    options = make_options(
+        separatemodules=True,
+        noheadings=False,
+        destdir=root,
+        suffix="rst",
+        dryrun=False,
+        force=True)
+
+    # Write out all the module files
+    for package_root in map(dirname, map(dirname, map(getfile, modules))):
+        apidoc.recurse_tree(package_root, [], options)
+
+    # Write out a better index page for pyfarm
+    index_source = dedent("""
+    PyFarm Package
+    ==============
+
+    Subpackages
+    -----------
+
+    .. toctree::
+
+        pyfarm.core
+        pyfarm.models
+        pyfarm.master
+        pyfarm.scheduler
+        pyfarm.agent
+        pyfarm.jobtypes
+    """).strip()
+
+    with open(root+"/pyfarm.rst", "w") as index:
+        index.write(index_source)

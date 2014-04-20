@@ -57,10 +57,7 @@ help:
 clean:
 	-rm -rfv $(BUILDDIR)/* source/modules/*.rst
 
-api:
-	-python script_apidocs.py source/modules/
-
-html: api
+html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."

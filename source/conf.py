@@ -108,3 +108,4 @@ sys.path.insert(0, ".")
 import conflib
 conflib.write_autogen_replacements(
     "include/autogen_replacements.rst")
+conflib.write_module_docs("modules")
