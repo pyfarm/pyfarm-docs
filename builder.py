@@ -1,23 +1,25 @@
-import atexit
 import sys
 import os
-import tempfile
-import time
 import shutil
 import subprocess
-from os.path import join, isdir
+import tempfile
+import time
+from os.path import join, isdir, isfile
 
 import virtualenv
 
 try:
-    REPO_ROOT = sys.argv[1]
+    REPO_ROOT, DEST_DIR = sys.argv[1], sys.argv[2]
 except IndexError:
-    print "usage: %s <checkout root>" % sys.argv[0]
+    print "usage: %s <checkout root> <output dir>" % sys.argv[0]
     sys.exit(1)
 
 PIP_CACHE = join(tempfile.gettempdir(), "pip_download_cache")
 if not isdir(PIP_CACHE):
     os.makedirs(PIP_CACHE)
+
+if not isdir(DEST_DIR):
+    os.makedirs(DEST_DIR)
 
 PYFARM_CORE = join(REPO_ROOT, "pyfarm-core")
 PYFARM_MASTER = join(REPO_ROOT, "pyfarm-master")
@@ -32,40 +34,38 @@ PIP = join(BIN, "pip")
 virtualenv.create_environment(VIRTUALENV)
 print "Created virtualenv at %s" % VIRTUALENV
 
-
-def cleanup():
-    print "Removing %s" % VIRTUALENV
-    try:
-        shutil.rmtree(VIRTUALENV)
-    except OSError:
-        pass
-
-# atexit.register(cleanup)
-
 _, logfile = tempfile.mkstemp(suffix=".log")
 print "Logging to %s" % logfile
 
 start = time.time()
+assert subprocess.call(
+    [PIP, "install", "nose", "--download-cache", PIP_CACHE,
+     "--upgrade"]) == 0
+assert subprocess.call(
+    [PIP, "install", "coverage", "--download-cache", PIP_CACHE,
+     "--upgrade"]) == 0
+
 for package in (PYFARM_CORE, PYFARM_MASTER, PYFARM_AGENT, PYFARM_DOCS):
     print "Installing %s" % package
-    return_code = subprocess.call(
+    assert subprocess.call(
         [PIP, "install", "-e", package, "--egg", "--download-cache", PIP_CACHE,
-         "--upgrade"])
-
-    if return_code != 0:
-        print open(logfile).read()
-        print "ERROR %s" % return_code
-        sys.exit(1)
+         "--upgrade"]) == 0
 
 print "Installed PyFarm in %s seconds" % (time.time() - start, )
 
-activate = join(BIN, "activate")
-subprocess.call(["make", "clean"], cwd=PYFARM_DOCS)
+builddir = tempfile.mkdtemp()
+print "Building documentation to %s"
 with open(tempfile.mkstemp()[-1], "w") as script:
     print >> script, "#!/bin/bash"
     print >> script, "source %s" % join(BIN, "activate")
     print >> script, "make clean"
-    print >> script, "make html"
+    print >> script, "make html BUILDDIR=%s" % builddir
+assert subprocess.call(["bash", script.name], cwd=PYFARM_DOCS) == 0
 
-return_code = subprocess.call(["sh", script.name], cwd=PYFARM_DOCS)
-print return_code
+print "Built %s" % builddir
+out_html = join(DEST_DIR, "html")
+build_html = join(builddir, "html")
+if isdir(out_html):
+    shutil.rmtree(out_html)
+shutil.move(build_html, DEST_DIR)
+print "Moved %s %s" % (build_html, DEST_DIR)
