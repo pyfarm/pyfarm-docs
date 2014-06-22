@@ -12,10 +12,10 @@ netifaces-merged
 ntplib
 psutil==1.2.1
 pyOpenSSL
--e git://github.com/pyfarm/pyfarm-docs.git#egg=pyfarm_docs-dev
--e git://github.com/pyfarm/pyfarm-agent.git#egg=pyfarm.agent-dev
--e git://github.com/pyfarm/pyfarm-core.git#egg=pyfarm.core-dev
--e git://github.com/pyfarm/pyfarm-master.git#egg=pyfarm.master-dev
+-e git://github.com/pyfarm/pyfarm-docs.git#egg=pyfarm_docs
+-e git://github.com/pyfarm/pyfarm-agent.git#egg=pyfarm.agent
+-e git://github.com/pyfarm/pyfarm-core.git#egg=pyfarm.core
+-e git://github.com/pyfarm/pyfarm-master.git#egg=pyfarm.master
 requests
 sphinxcontrib-httpdomain
 txTemplate
