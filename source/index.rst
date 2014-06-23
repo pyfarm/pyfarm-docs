@@ -29,7 +29,7 @@ Core
 ++++
 
 |status_core| | |coverage_core| |
-`Documentation <https://pyfarm.readthedocs.org/projects/pyfarm-core/>`_ |
+`Documentation <projects/pyfarm-core/>`_ |
 `Source Code <https://github.com/pyfarm/pyfarm-core>`_
 
 This is the base library which provides a few modules and objects which the
@@ -40,7 +40,7 @@ Master
 ++++++
 
 |status_master| | |coverage_master| |
-`Documentation <https://pyfarm.readthedocs.org/projects/pyfarm-master/>`_ |
+`Documentation <projects/pyfarm-master/>`_ |
 `Source Code <https://github.com/pyfarm/pyfarm-master>`_
 
 This is the component responsible for storing jobs and tasks to run as well
@@ -52,7 +52,7 @@ Agent
 +++++
 
 |status_agent| | |coverage_agent| |
-`Documentation <https://pyfarm.readthedocs.org/projects/pyfarm-agent/>`_ |
+`Documentation <projects/pyfarm-agent/>`_ |
 `Source Code <https://github.com/pyfarm/pyfarm-agent>`_
 
 This component controls the execution of commands on remote systems as
