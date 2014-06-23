@@ -53,7 +53,6 @@ PyFarm (ex. agent or master).  See the below table to get familiar with the
 various sub-projects as they will be referenced later on:
 
 .. some simple subs. for the table below
-.. _pyfarm: https://github.com/pyfarm/pyfarm
 .. _pyfarm-docs: https://github.com/pyfarm/pyfarm-docs
 .. _pyfarm-core: https://github.com/pyfarm/pyfarm-core
 .. _pyfarm-master: https://github.com/pyfarm/pyfarm-master
@@ -64,9 +63,6 @@ various sub-projects as they will be referenced later on:
     ================= =========== ==============================================
     Sub-Project       Type        Description
     ================= =========== ==============================================
-    pyfarm_           Supporting  * project wide command line tools
-                                  * development tools for tagging and deployment
-                                    to PyPi
     pyfarm-docs_      Supporting  * source code to documentation in restructured
                                     text form
                                   * pushes to this repository will:
