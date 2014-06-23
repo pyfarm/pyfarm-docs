@@ -67,10 +67,8 @@ various sub-projects as they will be referenced later on:
     pyfarm_           Supporting  * project wide command line tools
                                   * development tools for tagging and deployment
                                     to PyPi
-                                  * supports Python versions |versions_pyfarm|
     pyfarm-docs_      Supporting  * source code to documentation in restructured
                                     text form
-                                  * supports Python versions |versions_docs|
                                   * pushes to this repository will:
                                       * build docs at https://readthedocs.org/builds/pyfarm/
     pyfarm-core_      Operations  * common library used by all other
@@ -83,7 +81,6 @@ various sub-projects as they will be referenced later on:
                                     do this instead (ex. pyfarm-agent specifies
                                     the dependencies that the system information
                                     library needs)
-                                  * supports Python versions |versions_core|
                                   * pushes to this repository will:
                                       * build at https://travis-ci.org/pyfarm/pyfarm-core
                                       * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-core
@@ -91,7 +88,6 @@ various sub-projects as they will be referenced later on:
                                     host which can run jobs, update the master
                                     on a host's resources, and track progress of
                                     individual commands
-                                  * supports Python versions |versions_agent|
                                   * pushes to this repository will:
                                       * build at https://travis-ci.org/pyfarm/pyfarm-agent
                                       * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-agent
@@ -104,7 +100,6 @@ various sub-projects as they will be referenced later on:
                                   * contains the database models which store
                                     and retrieve data from the database
                                   * defines and hosts the REST api
-                                  * supports Python versions |versions_master|
                                   * pushes to this repository will:
                                       * build at https://travis-ci.org/pyfarm/pyfarm-master
                                       * collect coverage at https://coveralls.io/r/pyfarm/pyfarm-master
