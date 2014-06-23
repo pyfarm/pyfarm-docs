@@ -19,12 +19,12 @@ PyFarm - A Python Based Distributed Job System
     These documents are still undergoing revision
 
 PyFarm is a Python based distributed job system which is intended to be easy
-to deploy and maintain. Initially developed to be used solely by the Visual
-Effects industry there is the intention to expand into other areas as well
-such as the general scientific community.  For additional information see
-the index below.
+to deploy and maintain. Initially developed for individual use new revisions
+have been engineered with larger deployments in mind.
 
-**Table of Contents**
+
+
+**Contents**
 
 .. toctree::
     :maxdepth: 3

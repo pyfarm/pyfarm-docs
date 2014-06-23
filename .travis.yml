@@ -1,21 +1,11 @@
 language: python
 python:
-  - 2.6
   - 2.7
 
 env:
   - TARGET=html TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="debug"
-  - TARGET=html TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="prod" PYFARM_SECRET_KEY="travis"
-  - TARGET=latex TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="debug"
-  - TARGET=latex TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="prod" PYFARM_SECRET_KEY="travis"
-  - TARGET=text TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="debug"
-  - TARGET=text TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="prod" PYFARM_SECRET_KEY="travis"
-  - TARGET=linkcheck TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="debug"
-  - TARGET=linkcheck TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="prod" PYFARM_SECRET_KEY="travis"
 
 install:
-  - mkdir $HOME/.pip/ && curl https://raw.github.com/pyfarm/pyfarm/master/misc/travis_pip.conf -o $HOME/.pip/pip.conf
-  - pip install -r requirements.txt
   - python setup.py install
 
 script:

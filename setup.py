@@ -14,24 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
+
 import sys
 assert sys.version_info[0:2] >= (2, 6), "Python 2.6 or higher is required"
 
-# Because we have to install libraries directly from repos, we must
-# use the setup.py directly for now.  PIP runs this file as a script which
-# means it does not always pickup our custom install clas
-
 from setuptools import setup
-
-install_requires = [
-    "sphinx",
-    "sphinxcontrib-httpdomain"]
-
-if "READTHEDOCS" not in os.environ:
-    install_requires += ["sphinx_rtd_theme"]
 
 setup(
     name="pyfarm-docs",
-    version="0.7.0",
-    install_requires=install_requires)
+    version="latest",
+    install_requires=["sphinx"])
