@@ -1,13 +1,12 @@
 language: python
 python:
   - 2.7
-
-env:
-  - TARGET=html TDB_TYPE=sqlite PYFARM_DATABASE_URI="sqlite:///:memory:" PYFARM_CONFIG="debug"
+  - 3.4
 
 install:
-  - python setup.py install
+  - pip install .
 
 script:
   - pip freeze
-  - make $TARGET
+  - make html
+  - make linkcheck
