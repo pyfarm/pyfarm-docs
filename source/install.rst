@@ -1,8 +1,8 @@
+.. attention::
+    This document is a draft
+
 Installation
 ============
-
-.. warning::
-    this document is a draft
 
 These instructions cover the general installation of PyFarm's components.
 Please note they may vary between platforms though these differences are usually
