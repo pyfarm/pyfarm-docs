@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from os.path import join
-
 # -- General configuration ------------------------------------------------
 
+linkcheck_timeout = 60
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx.ext.coverage",
-    "sphinx.ext.viewcode"]
+    "sphinx.ext.viewcode",
+    "sphinxcontrib.httpdomain"]
 
 templates_path = ["_templates"]
 source_suffix = ".rst"

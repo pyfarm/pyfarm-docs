@@ -23,4 +23,4 @@ from setuptools import setup
 setup(
     name="pyfarm-docs",
     version="latest",
-    install_requires=["sphinx"])
+    install_requires=["sphinx", "sphinxcontrib-httpdomain"])
