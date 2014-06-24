@@ -2,10 +2,14 @@ language: python
 python:
   - 2.7
 
+before_install:
+  - curl https://raw.githubusercontent.com/pyfarm/pyfarm/master/misc/retry.sh -o retry.sh
+  - source retry.sh
+
 install:
-  - pip install .
+  - retry pip install .
 
 script:
   - pip freeze
   - make html
-  - make linkcheck
+  - retry make linkcheck
