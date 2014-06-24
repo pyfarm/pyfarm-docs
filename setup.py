@@ -14,13 +14,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
+import os
 import sys
 assert sys.version_info[0:2] >= (2, 6), "Python 2.6 or higher is required"
 
 from setuptools import setup
 
+install_requires = ["sphinx", "sphinxcontrib-httpdomain"]
+
+if "READTHEDOCS" in os.environ:
+    install_requires.append("PIL")  # Image scaling
+
 setup(
     name="pyfarm-docs",
     version="latest",
-    install_requires=["sphinx", "sphinxcontrib-httpdomain"])
+    install_requires=install_requires)
