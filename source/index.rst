@@ -1,9 +1,27 @@
-.. |status_core| image:: https://travis-ci.org/pyfarm/pyfarm-core.svg?branch=master
-.. |status_master| image:: https://travis-ci.org/pyfarm/pyfarm-master.svg?branch=master
-.. |status_agent| image:: https://travis-ci.org/pyfarm/pyfarm-agent.svg?branch=master
-.. |coverage_core| image:: https://coveralls.io/repos/pyfarm/pyfarm-core/badge.png?branch=master
-.. |coverage_master| image:: https://coveralls.io/repos/pyfarm/pyfarm-master/badge.png?branch=master
-.. |coverage_agent| image:: https://coveralls.io/repos/pyfarm/pyfarm-agent/badge.png?branch=master
+.. |buildcore| image:: https://travis-ci.org/pyfarm/pyfarm-core.svg?branch=master
+    :target: https://travis-ci.org/pyfarm/pyfarm-core
+    :alt: Build Status
+
+.. |buildmaster| image:: https://travis-ci.org/pyfarm/pyfarm-master.svg?branch=master
+    :target: https://travis-ci.org/pyfarm/pyfarm-master
+    :alt: Build Status
+
+.. |buildagent| image:: https://travis-ci.org/pyfarm/pyfarm-agent.svg?branch=master
+    :target: https://travis-ci.org/pyfarm/pyfarm-agent
+    :alt: Build Status
+
+.. |coveragecore| image:: https://coveralls.io/repos/pyfarm/pyfarm-core/badge.png?branch=master
+    :target: https://coveralls.io/r/pyfarm/pyfarm-core?branch=master
+    :alt: Code Coverage
+
+.. |coverageagent| image:: https://coveralls.io/repos/pyfarm/pyfarm-agent/badge.png?branch=master
+    :target: https://coveralls.io/r/pyfarm/pyfarm-agent?branch=master
+    :alt: Code Coverage
+
+.. |coveragemaster| image:: https://coveralls.io/repos/pyfarm/pyfarm-master/badge.png?branch=master
+    :target: https://coveralls.io/r/pyfarm/pyfarm-master?branch=master
+    :alt: Code Coverage
+
 
 PyFarm - A Python Based Distributed Job System
 ==============================================
@@ -28,7 +46,7 @@ as much as possible.
 Core
 ++++
 
-|status_core| | |coverage_core| |
+|buildcore| | |coveragecore| |
 `Documentation <../../projects/pyfarm-core/>`_ |
 `Source Code <https://github.com/pyfarm/pyfarm-core>`_
 
@@ -39,7 +57,7 @@ is to centralize code basic functionality such as logging and configuration.
 Master
 ++++++
 
-|status_master| | |coverage_master| |
+|buildmaster| | |coveragemaster| |
 `Documentation <../../projects/pyfarm-master/>`_ |
 `Source Code <https://github.com/pyfarm/pyfarm-master>`_
 
@@ -51,7 +69,7 @@ interact with the relational database, REST APIs and scheduler.
 Agent
 +++++
 
-|status_agent| | |coverage_agent| |
+|buildagent| | |coverageagent| |
 `Documentation <../../projects/pyfarm-agent/>`_ |
 `Source Code <https://github.com/pyfarm/pyfarm-agent>`_
 
