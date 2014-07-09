@@ -35,6 +35,11 @@ have been engineered with larger deployments in mind.  It's a system that's
 focused on providing a framework for customized command execution while
 taking into account resource management.
 
+Since this project is under active development, if you have specific
+questions or comments you're always welcome to post to the google groups
+`discussion list <https://groups.google.com/a/pyfarm.net/forum/#!forum/discuss>`_
+or via email to discuss@pyfarm.net.
+
 Components
 ----------
 
