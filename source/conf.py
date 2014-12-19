@@ -24,7 +24,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "pyfarm"
-copyright = "2014, Oliver Palmer, Guido Winkelmann"
+copyright = "2014, Oliver Palmer, Ambient Entertainment GmbH & Co. KG"
 
 # The version info for the project you"re documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
