@@ -37,8 +37,8 @@ taking into account resource management.
 
 Since this project is under active development, if you have specific
 questions or comments you're always welcome to post to the google groups
-`discussion list <https://groups.google.com/a/pyfarm.net/forum/#!forum/discuss>`_
-or via email to discuss@pyfarm.net.
+`discussion list <https://groups.google.com/forum/#!forum/pyfarm>`_
+or via email to pyfarm@googlegroups.com.
 
 Components
 ----------
